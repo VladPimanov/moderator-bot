@@ -1,5 +1,5 @@
 # config.py
-TOKEN = "7902441298:AAEbXzRqmFf6xIAKVnNdkcTvqxKs7qQTBSM"
+TOKEN = "TOKEN"
 ADMIN_IDS = []
 BANNED_WORDS = ["мат", "мат2"]
 SPAM_LIMIT = 5
