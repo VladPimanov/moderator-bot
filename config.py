@@ -1,0 +1,8 @@
+# config.py
+TOKEN = "7902441298:AAEbXzRqmFf6xIAKVnNdkcTvqxKs7qQTBSM"
+ADMIN_IDS = []
+BANNED_WORDS = ["мат", "мат2"]
+SPAM_LIMIT = 5
+MUTE_DURATION = 10
+TIME_UPDATE_COUNT_MESSAGES = 60
+MODEL_PATH = 'full_model.pth'
