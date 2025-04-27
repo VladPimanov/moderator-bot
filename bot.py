@@ -8,7 +8,7 @@ from telegram.ext import (
     filters
 )
 
-TOKEN = "7902441298:AAFXdV30BpSIkdEek1QXRZJOLr3aJjq-9Zk"
+TOKEN = "7902441298:AAEbXzRqmFf6xIAKVnNdkcTvqxKs7qQTBSM"
 ADMIN_IDS = []
 BANNED_WORDS = ["мат", "мат2"]
 SPAM_LIMIT = 5
