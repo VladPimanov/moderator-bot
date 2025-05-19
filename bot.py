@@ -9,7 +9,7 @@ from telegram.ext import (
     filters
 )
 from datetime import datetime
-
+from urlScanner import VirusTotalURLScanner
 
 
 TOKEN = "TOKEN"
@@ -98,7 +98,12 @@ async def check_spam(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None
 
     if re.search(r'(http|https|t.me|@)\S+', update.message.text):
         if update.effective_user.id not in ADMIN_IDS:
-            await context.bot.delete_message(chat_id, update.message.message_id)
+            array_words = update.message.text.split(' ')
+            for word in array_words:
+                if 'http' in word or 't.me' in word:
+                    find_url = word
+                    if VirusTotalURLScanner.get_url_reputation(find_url) == True:
+                        await context.bot.delete_message(chat_id, update.message.message_id)
 
 def main() -> None:
     app = Application.builder().token(TOKEN).build()
